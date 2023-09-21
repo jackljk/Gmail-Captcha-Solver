@@ -3,7 +3,7 @@ import json
 from selenium import webdriver
 import time
 
-CONFIG = json.load(open('Captcha_Challenge\Gmail-Captcha-Solver\config.json', 'r'))
+CONFIG = json.load(open('config.json', 'r'))
 
 
 def main():
@@ -55,6 +55,7 @@ def main():
         print('sleeping')
         time.sleep(5)    
         captcha_type =  gmailBot.captchaCheck()
+        break
         
         
     # Entering the password

@@ -51,6 +51,7 @@ class GMAIL:
         '''
             Checks the type of captcha and returns the type
         '''
+        print('Checking for captcha')
         try :
             self.driver.find_element(By.XPATH, self.config['XPATHS']['Recaptcha_sitekey'])
             return 'Recaptcha'
@@ -129,6 +130,7 @@ class GMAIL:
             Enters the password into the input field and clicks the Next button
         '''
         # Entering the password
+        print('Entering the password')
         password_input = self.driver.find_element(By.XPATH, self.config['XPATHS']['Password_input'])
         password_input.send_keys(password)
 
